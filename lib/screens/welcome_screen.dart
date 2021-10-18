@@ -25,7 +25,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     controller.forward();
     controller.addListener(() {
       setState(() {});
-      print(controller.value);
     });
   }
 
@@ -63,18 +62,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             ),
             Button(
               text: "Login",
-              onpressed: (){
+              onpressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
               },
-              
             ),
             Button(
               text: "Register",
-              onpressed: (){
+              onpressed: () {
                 print("called you");
-                Navigator.pushNamed(context,RegistrationScreen.id);
+                Navigator.pushNamed(context, RegistrationScreen.id);
               },
-              
             ),
           ],
         ),
@@ -82,5 +79,3 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     );
   }
 }
-
-
